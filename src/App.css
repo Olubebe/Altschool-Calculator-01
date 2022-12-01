@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: url("https://www.uincs.com/uploads/wallpapers/aesthetic_black_wallpaper_1660744217.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7em, auto) repeat(5, 6rem);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background: rgba(166, 167, 218, 0.185);
+  backdrop-filter: blur(10px);
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(65, 53, 53, 0.507);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.603);
+  font-size: 1.5rem;
+}
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
